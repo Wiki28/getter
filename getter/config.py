@@ -29,15 +29,15 @@ def tobool(val: str) -> typing.Optional[int]:
 
 
 class Var:
-    DEV_MODE: bool = tobool(getenv("DEV_MODE", "false").strip())
+    DEV_MODE: bool = tobool(getenv("DEV_MODE", "True").strip())
     API_ID: int = int(getenv("API_ID", "0").strip())
     API_HASH: str = getenv("API_HASH", "").strip()
     STRING_SESSION: str = getenv("STRING_SESSION", "").strip()
     DATABASE_URL: str = getenv("DATABASE_URL", "sqlite:///./getter.db").strip()
     BOTLOGS: int = int(getenv("BOTLOGS", "0").strip())
-    HANDLER: str = getenv("HANDLER", ".").strip()
-    NO_HANDLER: bool = tobool(getenv("NO_HANDLER", "false").strip())
-    TZ: str = getenv("TZ", "Asia/Jakarta").strip()
+    HANDLER: str = getenv("HANDLER", ",").strip()
+    NO_HANDLER: bool = tobool(getenv("NO_HANDLER", "True").strip())
+    TZ: str = getenv("TZ", "Asia/Makassar").strip()
     LANG_CODE: str = getenv("LANG_CODE", "id").lower().strip()
     HEROKU_APP_NAME: str = getenv("HEROKU_APP_NAME", "").strip()
     HEROKU_API: str = getenv("HEROKU_API", "").strip()
